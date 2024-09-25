@@ -1,0 +1,23 @@
+[package]
+name = "bbqr-cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+# bbqr
+bbqr =  { version = "0.3" }
+fast_qr = { version = "0.12", features = ["image"] }
+
+# clap
+clap = { version = "4.5", features = ["derive"] }
+
+# errors
+eyre = "0.6"
+color-eyre = "0.6"
+
+# logging
+log = "0.4"
+env_logger = "0.11"
+
+
