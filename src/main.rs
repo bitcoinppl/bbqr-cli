@@ -1,10 +1,13 @@
+pub mod cli;
 pub mod split;
 
 use clap::{Parser, Subcommand};
 use eyre::Result;
 
 #[derive(Parser, Debug)]
-#[command(author, version, about, long_about = None)]
+#[clap(name = "BBQr", author, version, about, long_about = None)]
+#[command(styles=cli::get_styles())]
+#[clap(args_override_self = true, arg_required_else_help = true)]
 struct BbqrCli {
     #[command(subcommand)]
     command: Commands,
@@ -12,7 +15,7 @@ struct BbqrCli {
 
 #[derive(Subcommand, Debug)]
 enum Commands {
-    /// Merge bbqr splits
+    /// Merge bbqr splits (currently not implemented)
     Merge(MergeArgs),
 
     /// Split input

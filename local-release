@@ -1,0 +1,8 @@
+#!/bin/bash
+
+APP=bbqr
+INSTALL_DIR=$HOME/.local/bin
+
+cargo build --release;
+rm  $INSTALL_DIR/$APP || true;
+ln -s "$(pwd)/target/release/$APP" $INSTALL_DIR/$APP;
