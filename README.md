@@ -10,6 +10,15 @@ project.
 
 Or you can use the locall release script with `./local-release.sh`. It will build and copy the binary to the `$HOME/.local/bin` folder
 
+## Demo
+
+
+
+https://github.com/user-attachments/assets/8a8b66da-8611-4935-930d-db98a4934b16
+
+
+
+
 ## TODO
 
 - [ ] Add support for merging bbqr splits
