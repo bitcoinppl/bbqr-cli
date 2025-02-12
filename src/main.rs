@@ -33,14 +33,23 @@ pub struct SplitArgs {
     /// Maximum number of splits
     #[arg(short = 'M', long, default_value_t = 138)]
     max_splits: usize,
+
     /// Version to use for splitting
     #[arg(short, long)]
     version: Option<u16>,
 
+    /// Min version to use for splitting
+    #[arg(short = 'x', long, default_value_t = 1)]
+    min_version: u16,
+
+    /// Max version to use for splitting
+    #[arg(short = 'X', long, default_value_t = 20)]
+    max_version: u16,
+
     /// Output directory
-    /// If not provided, will use the current directory
-    #[arg(short, long, default_value = ".")]
-    output: String,
+    /// If not provided, will show the QR codes in the terminal
+    #[arg(short, long)]
+    output: Option<String>,
 }
 
 #[derive(Parser, Debug)]
