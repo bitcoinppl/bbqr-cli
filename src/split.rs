@@ -17,6 +17,7 @@ pub fn run(args: SplitArgs) -> Result<()> {
     let mut split_options = SplitOptions {
         min_split_number: args.min_splits,
         max_split_number: args.max_splits,
+        encoding: bbqr::encode::Encoding::Zlib,
         ..Default::default()
     };
 
