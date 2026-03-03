@@ -1,4 +1,5 @@
 pub mod cli;
+pub mod merge;
 pub mod split;
 
 use clap::{Parser, Subcommand};
@@ -66,7 +67,7 @@ fn main() -> Result<()> {
 
     match args.command {
         Commands::Split(split_args) => split::run(split_args)?,
-        Commands::Merge(_) => unimplemented!(),
+        Commands::Merge(merge_args) => merge::run(merge_args)?,
     };
 
     Ok(())
